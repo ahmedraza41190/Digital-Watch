@@ -12,15 +12,26 @@ body{
     position: relative;
     top: 265px;
 }
-.wrapper{
+.container{
     
     height: 100px;
     width: 360px;
     cursor: default;
     background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
     border-radius: 10px;
+    animation-name: shine;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
-.wrapper .display{
+@keyframes shine{
+    0%,100%{
+        box-shadow: 0px 0px 32px -12px rgba(246, 180, 0, .5);
+    }
+    50%{
+        box-shadow: 0px 0px 32px 3px rgba(246, 180, 0, .5);
+    }
+}
+.container .display{
     position: relative;
     top: 50%;
     left: 50%;
@@ -33,7 +44,7 @@ body{
     text-align: center;
     
 }
-.wrapper .display #time{
+.container .display span{
     line-height: 85px;
     color: #fff;
     font-size: 50px;
